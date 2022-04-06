@@ -6,6 +6,11 @@ import { Header, Footer } from './Components/Layout';
 import Exercises from './Components/Layout/Exercises';
 
 export default function App() {
+	const [
+		exercises,
+		setExercises,
+	] = useState({ exercises: [], title: '' });
+
 	return (
 		<Fragment>
 			<Header />
