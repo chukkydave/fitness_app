@@ -1,7 +1,7 @@
 import React, { useState, SyntheticEvent } from 'react';
 import { Tabs, Tab, Paper } from '@mui/material';
 
-export default (props) => {
+export default ({ muscles, onSelect }) => {
 	const [
 		value,
 		setValue,
@@ -19,9 +19,8 @@ export default (props) => {
 				onChange={handleChange}
 				centered
 			>
-				<Tab label="Item One" />
-				<Tab label="Item Two" />
-				<Tab label="Item Three" />
+				<Tab label="All" />
+				{muscles.map((muscle, id) => <Tab key={id} label={muscle} />)}
 			</Tabs>
 		</Paper>
 	);
